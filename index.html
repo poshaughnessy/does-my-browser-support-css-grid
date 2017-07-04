@@ -10,33 +10,42 @@
       body {
         height: 100%;
         margin: 0;
-        display: grid;
-        align-items: center;
-      }
-      h1 {
-        font-size: 6em;
+        padding: 1em;
+        font-family: arial, helvetica, sans-serif;
         text-align: center;
       }
       #yes {
         display: none;
+      }
+      h1 {
+        font-size: 6em;
+        font-family: Georgia, Times, 'Times New Roman', serif;
+        margin-bottom: 0.5em;
+      }
+      #yes h1 {
         color: #319b07;
       }
-      #no {
+      #no h1 {
         color: #cb1a0d;
       }
-      footer {
-        font-family: arial, helvetica, sans-serif;
-        position: absolute;
-        bottom: 1em;
-        width: 100%;
-        text-align: center;
-        font-size: 0.9em;
+      p {
+        font-size: 1.2em;
         color: #666;
       }
-      footer a {
+      a {
         color: #000;
       }
+      footer {
+        margin-top: 4em;
+      }
+      footer p {
+        font-size: 0.8em;
+      }
       @supports (display: grid) {
+        body {
+          display: grid;
+          align-items: center;
+        }
         #yes {
           display: block;
         }
@@ -47,8 +56,16 @@
     </style>
   </head>
   <body>
-    <h1 id="yes">Yes.</h1>
-    <h1 id="no">No.</h1>
-    <footer>By <a href="https://twitter.com/poshaughnessy">Peter O'Shaughnessy</a> from <a href="https://samsunginter.net/">Samsung Internet</a></footer>
+    <div id="yes">
+      <h1>Yes.</h1>
+      <p>If you would like to learn more, <a href="http://jensimmons.com/post/feb-27-2017/learn-css-grid">here are some resources</a>.</p>
+    </div>
+    <div id="no">
+      <h1>No.</h1>
+      <p>But don't worry, <a href="https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/">you can still support it</a>.</p>
+    </div>
+    <footer>
+      <p>By <a href="https://twitter.com/poshaughnessy">Peter O'Shaughnessy</a> from <a href="https://samsunginter.net/">Samsung Internet</a></p>
+    </footer>
   </body>
 </html>
