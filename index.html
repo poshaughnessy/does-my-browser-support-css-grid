@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <style>
+      html {
+        height: 100%;
+      }
+      body {
+        display: grid;
+        height: 100%;
+        margin: 0;
+      }
+      h1 {
+        font-size: 6em;
+        align-self: center;
+        justify-self: center;
+      }
+      #yes {
+        display: none;
+        color: #319b07;
+      }
+      #no {
+        color: #cb1a0d;
+      }
+      @supports (display: grid) {
+        #yes {
+          display: block;
+        }
+        #no {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="yes">Yes.</h1>
+    <h1 id="no">No.</h1>
+  </body>
+</html>
