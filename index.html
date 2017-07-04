@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Does My Browser Support CSS Grid?</title>
     <style>
       html {
         height: 100%;
       }
       body {
-        display: grid;
         height: 100%;
         margin: 0;
+        display: grid;
+        align-items: center;
       }
       h1 {
         font-size: 6em;
-        align-self: center;
-        justify-self: center;
+        text-align: center;
       }
       #yes {
         display: none;
@@ -22,6 +23,18 @@
       }
       #no {
         color: #cb1a0d;
+      }
+      footer {
+        font-family: arial, helvetica, sans-serif;
+        position: absolute;
+        bottom: 1em;
+        width: 100%;
+        text-align: center;
+        font-size: 0.9em;
+        color: #666;
+      }
+      footer a {
+        color: #000;
       }
       @supports (display: grid) {
         #yes {
@@ -36,5 +49,6 @@
   <body>
     <h1 id="yes">Yes.</h1>
     <h1 id="no">No.</h1>
+    <footer>By <a href="https://twitter.com/poshaughnessy">Peter O'Shaughnessy</a> from <a href="https://samsunginter.net/">Samsung Internet</a></footer>
   </body>
 </html>
